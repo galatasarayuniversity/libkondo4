@@ -110,7 +110,7 @@
 #define RCB4_ADDR_BTN_M 0x03  //
 #define RCB4_ADDR_BTN_H 0x00  //
 #define RCB4_ADDR_MOT_BASE  3000 // motion base address
-#define RCB4_MOT_SIZE  4864   // motion slot num bytes
+#define RCB4_MOT_SIZE  2048   // motion slot num bytes
 #define RCB4_MOT_MAX   241336 // highest motion
 #define RCB4_SERVO_ID_OFFSET 1 // data offset for ID
 #define RCB4_SERVO_SETPOS_OFFSET 6 // data offset for set pos

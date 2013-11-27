@@ -399,8 +399,8 @@ int kondo_play_motion(KondoRef ki, UINT num, long timeout)
 		kondo_error(ki, "Bad response trying to stop EEPROM.");
 
 	// (2) call motion script -------------------------------------------------
-	// You have to compute the motion address (3000 + num * 4864) and call it.
-	mot_addr = RCB4_MOT_SIZE * num + RCB4_ADDR_MOT_BASE;
+	// You have to compute the motion address (3000 + (num-1) * 2048) and call it.
+	mot_addr = (RCB4_MOT_SIZE * (num - 1)) + RCB4_ADDR_MOT_BASE;
 	ki->swap[0] = 7; // num bytes
 	ki->swap[1] = RCB4_CMD_CALL; // command
 	ki->swap[2] = (UCHAR) (mot_addr); // motion address l
